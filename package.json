@@ -1,0 +1,59 @@
+{
+  "name": "portfolio-v2",
+  "description": "The dev portfolio of Melanie Seltzer, built using GatsbyJS",
+  "version": "2.0.0",
+  "author": "Melanie Seltzer <melleh11@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/melanieseltzer/portfolio-v2.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "gatsby",
+    "react"
+  ],
+  "scripts": {
+    "build": "gatsby build",
+    "start": "gatsby develop",
+    "lint": "eslint 'src/**/*.js'",
+    "prettier": "prettier --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "yarn prettier",
+      "eslint --ignore-path .eslintignore",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "gatsby": "^2.0.76",
+    "gatsby-image": "^2.0.20",
+    "gatsby-plugin-manifest": "^2.0.9",
+    "gatsby-plugin-offline": "^2.0.16",
+    "gatsby-plugin-react-helmet": "^3.0.2",
+    "gatsby-plugin-sharp": "^2.0.14",
+    "gatsby-source-filesystem": "^2.0.8",
+    "gatsby-transformer-sharp": "^2.1.8",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-helmet": "^5.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3"
+  }
+}
