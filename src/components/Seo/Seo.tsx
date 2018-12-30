@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
@@ -16,10 +16,10 @@ const detailsQuery = graphql`
 `;
 
 interface Props {
-  title: string,
-  description?: string,
-  lang?: string,
-  keywords?: Array<string>
+  title: string;
+  description?: string;
+  lang?: string;
+  keywords?: string[];
 }
 
 function SEO({ title, description, lang = 'eng', keywords = [] }: Props) {

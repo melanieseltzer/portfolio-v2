@@ -1,11 +1,11 @@
 import React, { ReactNode } from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 
 import Header from '../Header';
 import './layout.css';
 
 interface Props {
-  children: ReactNode
+  children: ReactNode;
 }
 
 const Layout = ({ children }: Props) => (
