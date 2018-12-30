@@ -2,7 +2,6 @@ import React, { ReactNode } from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 
 import Header from '../Header';
-import './layout.css';
 
 interface Props {
   children: ReactNode;
