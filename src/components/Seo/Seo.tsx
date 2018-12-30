@@ -1,7 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { StaticQuery, graphql } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
@@ -9,19 +8,30 @@ const detailsQuery = graphql`
       siteMetadata {
         title
         description
+        keywords
         author
       }
     }
   }
 `;
 
-function SEO({ description, lang, meta, keywords, title }) {
+interface Props {
+  title: string;
+  description?: string;
+  lang?: string;
+  keywords?: string[];
+}
+
+function SEO({ title, description, lang = 'eng', keywords = [] }: Props) {
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description;
+        const metaKeywords =
+          keywords.join(', ') || data.site.siteMetadata.keywords.join(', ');
+
         return (
           <Helmet
             htmlAttributes={{
@@ -33,6 +43,10 @@ function SEO({ description, lang, meta, keywords, title }) {
               {
                 name: `description`,
                 content: metaDescription
+              },
+              {
+                name: `keywords`,
+                content: metaKeywords
               },
               {
                 property: `og:title`,
@@ -62,36 +76,12 @@ function SEO({ description, lang, meta, keywords, title }) {
                 name: `twitter:description`,
                 content: metaDescription
               }
-            ]
-              .concat(
-                keywords.length > 0
-                  ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `)
-                    }
-                  : []
-              )
-              .concat(meta)}
+            ]}
           />
         );
       }}
     />
   );
 }
-
-SEO.defaultProps = {
-  description: '',
-  lang: `en`,
-  meta: [],
-  keywords: []
-};
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.array,
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired
-};
 
 export default SEO;
