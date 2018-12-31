@@ -22,6 +22,7 @@
         "import-sources-order": "any"
       }
     ],
+    "react-anchor-blank-noopener": true,
     "semicolon": [true, "always", "ignore-interfaces"],
     "variable-name": false
   },

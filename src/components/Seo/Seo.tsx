@@ -25,7 +25,7 @@ interface Props {
   keywords?: string[];
 }
 
-function SEO({ title, description, lang = 'eng', keywords = [] }: Props) {
+function SEO({ title, description, lang = 'en', keywords = [] }: Props) {
   return (
     <StaticQuery
       query={detailsQuery}
