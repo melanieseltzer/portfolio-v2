@@ -37,7 +37,8 @@ module.exports = {
       options: {
         fonts: ['lato:400', 'lora:400,400i,700']
       }
-    }
+    },
+    'gatsby-plugin-styled-components'
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

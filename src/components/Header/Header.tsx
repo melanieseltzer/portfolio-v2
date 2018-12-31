@@ -1,21 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import SVG from '../SVG';
+
 import { COLORS, maxWidth } from '../../constants';
 
 const Header = () => (
-  <HeaderWrapper>
-    <Container>
-      <div>
-        <H1>Hi! I'm Melanie 👋</H1>
-        <Byline>
-          I'm a Los Angeles-based front-end developer who's worked across the
-          stack. I love building cool stuff and learning everything I can in the
-          process 🚀
-        </Byline>
-      </div>
-    </Container>
-  </HeaderWrapper>
+  <>
+    <HeaderWrapper>
+      <Container>
+        <div>
+          <H1>Hi! I'm Melanie 👋</H1>
+          <Byline>
+            I'm a Los Angeles-based front-end developer who's worked across the
+            stack. I love building cool stuff and learning everything I can in
+            the process 🚀
+          </Byline>
+        </div>
+      </Container>
+    </HeaderWrapper>
+    <SVGBottomBorder>
+      <SVG />
+    </SVGBottomBorder>
+  </>
 );
 
 export default Header;
@@ -27,12 +34,33 @@ const HeaderWrapper = styled.header`
   justify-content: center;
   height: auto;
   @media (min-width: 1024px) {
-    height: calc(100vh);
+    height: calc(100vh - 150px);
+  }
+`;
+
+const SVGBottomBorder = styled.div`
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  @media (min-width: 414px) {
+    height: 100px;
+  }
+  @media (min-width: 768px) {
+    height: 150px;
+  }
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+  path {
+    stroke: none;
+    fill: ${COLORS.gray.light};
   }
 `;
 
 const Container = styled.div`
-  margin: 100px 20px;
+  margin: 50px 20px;
   max-width: ${maxWidth};
   @media (min-width: 1024px) {
     margin: 0 auto;
