@@ -1,9 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import ProfilePhoto from '../ProfilePhoto';
+
 const Header = () => (
   <HeaderWrapper>
     <Container>
+      <ProfilePhoto />
       <H1>Hi! I'm Melanie 👋</H1>
       <Byline>
         I'm a Los Angeles-based front-end developer who's worked across the
