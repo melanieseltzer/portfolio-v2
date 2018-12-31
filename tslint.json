@@ -1,9 +1,16 @@
 {
   "defaultSeverity": "error",
-  "extends": ["tslint:latest", "tslint-react", "tslint-config-prettier"],
+  "extends": [
+    "tslint-config-airbnb",
+    "tslint-react",
+    "tslint-react-a11y",
+    "tslint-config-prettier"
+  ],
   "jsRules": {},
   "rules": {
     "prettier": true,
+    "function-name": false,
+    "import-name": false,
     "interface-name": false,
     "jsx-no-lambda": false,
     "member-access": false,

@@ -15,7 +15,7 @@
   "scripts": {
     "build": "gatsby build",
     "start": "gatsby develop",
-    "lint": "tslint -t verbose -c tslint.json 'src/**/*.{ts,tsx}'"
+    "lint": "tslint -t verbose -c tslint.json --project tsconfig.json 'src/**/*.{ts,tsx}'"
   },
   "husky": {
     "hooks": {
@@ -60,9 +60,11 @@
     "lint-staged": "^8.1.0",
     "prettier": "^1.15.3",
     "tslint": "^5.12.0",
+    "tslint-config-airbnb": "^5.11.1",
     "tslint-config-prettier": "^1.17.0",
     "tslint-loader": "^3.5.4",
     "tslint-plugin-prettier": "^2.0.1",
-    "tslint-react": "^3.6.0"
+    "tslint-react": "^3.6.0",
+    "tslint-react-a11y": "^1.0.0"
   }
 }
