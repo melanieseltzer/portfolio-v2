@@ -2,6 +2,9 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { graphql, StaticQuery } from 'gatsby';
 
+// @ts-ignore
+import favicon from '../../images/favicon.png';
+
 const detailsQuery = graphql`
   query DefaultSEOQuery {
     site {
@@ -22,7 +25,7 @@ interface Props {
   keywords?: string[];
 }
 
-function SEO({ title, description, lang = 'eng', keywords = [] }: Props) {
+function SEO({ title, description, lang = 'en', keywords = [] }: Props) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -77,6 +80,7 @@ function SEO({ title, description, lang = 'eng', keywords = [] }: Props) {
                 content: metaDescription
               }
             ]}
+            link={[{ rel: 'icon', type: 'image/png', href: `${favicon}` }]}
           />
         );
       }}
