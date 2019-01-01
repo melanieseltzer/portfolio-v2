@@ -19,7 +19,7 @@ import styled from 'styled-components';
 //   tags?: string[];
 // }
 
-const Project = (/*{ title, description, githubLink, liveLink, tags }: Props*/) => (
+const Project = (/* { title, description, githubLink, liveLink, tags }: Props */) => (
   <ProjectWrapper>
     {/* title, description, github link, live link, tags */}
   </ProjectWrapper>
