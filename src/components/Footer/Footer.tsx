@@ -9,7 +9,10 @@ const Footer = () => (
       target="_blank"
       rel="noopener noreferrer"
     >
-      Built with ❤️
+      Built with{' '}
+      <span role="img" aria-label="heart">
+        ❤️
+      </span>
     </a>
   </FooterWrapper>
 );

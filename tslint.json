@@ -7,6 +7,9 @@
     "tslint-config-prettier"
   ],
   "jsRules": {},
+  "linterOptions": {
+    "exclude": ["node_modules/**/*.ts"]
+  },
   "rules": {
     "prettier": true,
     "function-name": false,
@@ -15,7 +18,7 @@
     "jsx-no-lambda": false,
     "member-access": false,
     "no-var-requires": true,
-    "object-literal-sort-keys": false,
+    "object-literal-sort-keys": true,
     "ordered-imports": [
       true,
       {
