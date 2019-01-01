@@ -18,7 +18,7 @@
     "jsx-no-lambda": false,
     "member-access": false,
     "no-var-requires": true,
-    "object-literal-sort-keys": true,
+    "object-literal-sort-keys": false,
     "ordered-imports": [
       true,
       {
