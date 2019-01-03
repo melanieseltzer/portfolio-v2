@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import { graphql, StaticQuery } from 'gatsby';
 
 // @ts-ignore
-import favicon from '../../images/favicon.png';
+import favicon from '../../images/favicon.ico';
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
@@ -80,7 +80,7 @@ function SEO({ title, description, lang = 'en', keywords = [] }: Props) {
                 content: metaDescription
               }
             ]}
-            link={[{ rel: 'icon', type: 'image/png', href: `${favicon}` }]}
+            link={[{ rel: 'icon', type: 'image/ico', href: `${favicon}` }]}
           />
         );
       }}
