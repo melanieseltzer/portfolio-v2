@@ -9,22 +9,20 @@ const Header = () => (
   <>
     <HeaderWrapper>
       <Container>
-        <div>
-          <H1>
-            Hi! I'm Melanie{' '}
-            <span role="img" aria-label="wave">
-              👋
-            </span>
-          </H1>
-          <Byline>
-            I'm a Los Angeles-based front-end developer who's worked across the
-            stack. I love building cool stuff and learning everything I can in
-            the process{' '}
-            <span role="img" aria-label="rocket">
-              🚀
-            </span>
-          </Byline>
-        </div>
+        <H1>
+          Hi! I'm Melanie{' '}
+          <span role="img" aria-label="wave">
+            👋
+          </span>
+        </H1>
+        <Byline>
+          I'm a Los Angeles-based front-end developer who's worked across the
+          stack. I love building cool stuff and learning everything I can in the
+          process{' '}
+          <span role="img" aria-label="rocket">
+            🚀
+          </span>
+        </Byline>
       </Container>
     </HeaderWrapper>
     <SVGBottomBorder>
@@ -56,14 +54,6 @@ const SVGBottomBorder = styled.div`
   }
   @media (min-width: 768px) {
     height: 150px;
-  }
-  svg {
-    height: 100%;
-    width: 100%;
-  }
-  path {
-    stroke: none;
-    fill: ${COLORS.gray.light};
   }
 `;
 
