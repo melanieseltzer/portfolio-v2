@@ -35,7 +35,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: ['lato:400', 'lora:400,400i,700']
+        fonts: ['Rubik:400', 'lora:400,400i,700']
       }
     },
     'gatsby-plugin-styled-components'

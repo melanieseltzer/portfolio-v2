@@ -18,5 +18,5 @@ const SVGStyled = styled.svg`
 
 const Path = styled.path`
   stroke: none;
-  fill: ${COLORS.gray.light};
+  fill: ${COLORS.secondary.lightest};
 `;

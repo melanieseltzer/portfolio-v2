@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import SectionTitle from '../SectionTitle';
 
-// import { COLORS, maxWidth } from '../../constants';
+import { maxWidth } from '../../constants';
 
 interface Props {
   title: string;
@@ -11,16 +11,18 @@ interface Props {
 }
 
 const Section = ({ title, children }: Props) => (
-  <SectionWrapper>
-    <Container>
-      <SectionTitle title={title} />
-      {children}
-    </Container>
-  </SectionWrapper>
+  <SectionStyled>
+    <SectionTitle title={title} />
+    {children}
+  </SectionStyled>
 );
 
 export default Section;
 
-const SectionWrapper = styled.section``;
-
-const Container = styled.div``;
+const SectionStyled = styled.section`
+  margin: 50px 20px;
+  max-width: ${maxWidth};
+  @media (min-width: 1024px) {
+    margin: 0 auto 80px auto;
+  }
+`;
