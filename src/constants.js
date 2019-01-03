@@ -2,14 +2,9 @@ import { css } from 'styled-components';
 
 // Colors
 export const COLORS = {
-  primary: { light: '', dark: '#5e79f2' },
-  secondary: { light: '#fbaab1', dark: '#ff5f6d' },
-  white: '#FFF',
-  gray: {
-    lightest: '#fdfdfd',
-    light: '#EBEDF2',
-    dark: '#262626'
-  }
+  primary: { light: '#F7F8FE', dark: '#5c75f6' },
+  secondary: { lightest: '#EBEDF2', light: '#595c62', dark: '#262626' },
+  white: '#FFF'
 };
 
 // Breakpoints and sizes

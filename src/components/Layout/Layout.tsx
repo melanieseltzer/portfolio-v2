@@ -30,14 +30,15 @@ const GlobalStyle = createGlobalStyle`
   }
   html,
   body {
-    color: ${COLORS.gray.dark};
+    color: ${COLORS.secondary.dark};
     font-size: 16px;
     height: 100%;
     margin: 0;
     padding: 0;
   }
   p {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.1rem;
     font-style: normal;
     font-weight: 400;
     margin: 0;
@@ -45,10 +46,6 @@ const GlobalStyle = createGlobalStyle`
   h1, h2, h3, h4 {
     font-family: 'Lora', sans-serif;
     margin: 0;
-  }
-  h2 {
-    font-weight: 400;
-    font-style: italic;
   }
   .gatsby-image-wrapper {
     border-radius: 50%;

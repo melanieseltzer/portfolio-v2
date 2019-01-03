@@ -13,13 +13,15 @@ export default Title;
 
 const H2 = styled.h2`
   font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 400;
   margin-bottom: 3rem;
   position: relative;
   &:before {
     content: '';
     width: 2.5rem;
     height: 1px;
-    background-color: ${COLORS.gray.dark};
+    background-color: ${COLORS.secondary.dark};
     display: inline-block;
     position: absolute;
     top: 50%;

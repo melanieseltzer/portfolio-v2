@@ -34,7 +34,7 @@ const Header = () => (
 export default Header;
 
 const HeaderWrapper = styled.header`
-  background: ${COLORS.gray.light};
+  background: ${COLORS.secondary.lightest};
   display: flex;
   flex-direction: column;
   justify-content: center;

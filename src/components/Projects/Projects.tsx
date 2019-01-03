@@ -3,7 +3,7 @@ import React from 'react';
 // import { gql } from 'apollo-boost';
 import styled from 'styled-components';
 
-// import Project from '../Project';
+import Project from '../Project';
 import Section from '../Section';
 
 // const GET_PROJECTS = gql`
@@ -38,6 +38,26 @@ const Projects = () => (
           ));
         }}
       </Query> */}
+      <Project
+        key="test"
+        project={{
+          title: 'This is an example of a really long title',
+          description: 'Recreating the SNES controller with pure CSS.',
+          githubLink: 'https://github.com',
+          liveLink: 'https://test.com',
+          tags: ['React', 'Gatsby']
+        }}
+      />
+      <Project
+        key="test"
+        project={{
+          title: 'Portfolio of Sara Diercks',
+          description: 'Recreating the SNES controller with pure CSS.',
+          githubLink: 'https://github.com',
+          liveLink: 'https://test.com',
+          tags: ['Nextjs', 'GraphCMS']
+        }}
+      />
     </ProjectsWrapper>
   </Section>
 );
