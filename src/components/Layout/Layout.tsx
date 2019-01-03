@@ -40,9 +40,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: 400;
+    margin: 0;
   }
   h1, h2, h3, h4 {
     font-family: 'Lora', sans-serif;
+    margin: 0;
   }
   h2 {
     font-weight: 400;

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import SVG from '../SVG';
 
-import { COLORS, maxWidth } from '../../constants';
+import { COLORS, container } from '../../constants';
 
 const Header = () => (
   <>
@@ -58,11 +58,7 @@ const SVGBottomBorder = styled.div`
 `;
 
 const Container = styled.div`
-  margin: 50px 20px;
-  max-width: ${maxWidth};
-  @media (min-width: 1024px) {
-    margin: 0 auto;
-  }
+  ${container}
 `;
 
 const H1 = styled.h1`
