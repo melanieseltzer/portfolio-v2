@@ -44,7 +44,6 @@ const Projects = () => (
           title: 'This is an example of a really long title',
           description: 'Recreating the SNES controller with pure CSS.',
           githubLink: 'https://github.com',
-          liveLink: 'https://test.com',
           tags: ['React', 'Gatsby']
         }}
       />
@@ -52,7 +51,8 @@ const Projects = () => (
         key="test"
         project={{
           title: 'Portfolio of Sara Diercks',
-          description: 'Recreating the SNES controller with pure CSS.',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse augue massa, porta a auctor posuere, convallis et justo. Quisque ornare dui sit amet consectetur ullamcorper. Aenean lacinia risus a porttitor efficitur.',
           githubLink: 'https://github.com',
           liveLink: 'https://test.com',
           tags: ['Nextjs', 'GraphCMS']

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import SectionTitle from '../SectionTitle';
 
-import { container } from '../../constants';
+import { maxWidth } from '../../constants';
 
 interface Props {
   title: string;
@@ -20,5 +20,9 @@ const Section = ({ title, children }: Props) => (
 export default Section;
 
 const SectionStyled = styled.section`
-  ${container}
+  margin: 50px 20px;
+  max-width: ${maxWidth};
+  @media (min-width: 1024px) {
+    margin: 0 auto 80px auto;
+  }
 `;

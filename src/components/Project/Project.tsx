@@ -1,9 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 // import Markdown from 'react-markdown';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { IoLogoGithub, IoMdArrowRoundForward } from 'react-icons/io';
 
 import { COLORS } from '../../constants';
 
@@ -11,7 +9,7 @@ interface Props {
   title: string;
   description: string;
   githubLink: string;
-  liveLink: string;
+  liveLink?: string;
   tags: string[];
 }
 
@@ -23,38 +21,31 @@ const Project = ({ project }: Project) => (
   <ProjectWrapper>
     {/* title, description, github link, live link, tags */}
     <ProjectHeader>
-      <Title>
-        <Link
-          href={project.githubLink}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {project.title}
-        </Link>
-      </Title>
+      <Title>{project.title}</Title>
       <Tags>
         <Tag>{project.tags[0]}</Tag>
         <Tag>{project.tags[1]}</Tag>
       </Tags>
     </ProjectHeader>
+
     <Description>{project.description}</Description>
 
     <Links>
+      {project.liveLink && (
+        <ProjectLink
+          href={project.liveLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Live <IconLive size="1rem" />
+        </ProjectLink>
+      )}
       <ProjectLink
         href={project.githubLink}
         target="_blank"
         rel="noopener noreferrer"
-        role="button"
       >
-        <Icon size="lg" icon={faGithub} />
-      </ProjectLink>
-      <ProjectLink
-        href={project.liveLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        role="button"
-      >
-        <Icon size="lg" icon={faExternalLinkAlt} />
+        Code <IconCode size="1rem" />
       </ProjectLink>
     </Links>
   </ProjectWrapper>
@@ -76,22 +67,17 @@ const ProjectHeader = styled.div`
   @media (min-width: 500px) {
     flex-direction: row;
     align-items: center;
-    margin-bottom: 0;
   }
 `;
 
 const Title = styled.h3`
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
   font-weight: 400;
   @media (min-width: 768px) {
     font-size: 2rem;
+    line-height: 2.7rem;
   }
-`;
-
-const Link = styled.a`
-  color: inherit;
-  position: relative;
-  text-decoration: none;
 `;
 
 const Description = styled.p`
@@ -102,7 +88,7 @@ const Description = styled.p`
 `;
 
 const Tags = styled.div`
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
   @media (min-width: 500px) {
     margin-top: 0;
   }
@@ -125,14 +111,30 @@ const Tag = styled.span`
   }
 `;
 
-const Icon = styled(FontAwesomeIcon)`
-  color: ${COLORS.secondary.light};
-`;
-
 const Links = styled.div`
   margin-top: 1rem;
 `;
 
 const ProjectLink = styled.a`
-  margin-right: 0.7rem;
+  display: inline-block;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.2rem;
+  color: ${COLORS.secondary.dark};
+  margin-right: 1rem;
+  padding-bottom: 3px;
+  text-decoration: none;
+`;
+
+const sharedIconStyles = css`
+  color: ${COLORS.secondary.dark};
+  margin-left: 5px;
+  margin-top: 5px;
+`;
+
+const IconLive = styled(IoMdArrowRoundForward)`
+  ${sharedIconStyles}
+`;
+
+const IconCode = styled(IoLogoGithub)`
+  ${sharedIconStyles}
 `;

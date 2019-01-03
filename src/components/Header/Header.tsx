@@ -3,22 +3,24 @@ import styled from 'styled-components';
 
 import SVG from '../SVG';
 
-import { COLORS, container } from '../../constants';
+import { COLORS, maxWidth } from '../../constants';
 
 const Header = () => (
   <>
     <HeaderWrapper>
       <Container>
-        <H1>
-          Hi! I'm Melanie{' '}
-          <span role="img" aria-label="wave">
-            👋
-          </span>
-        </H1>
+        <H1>Hi! I'm Melanie.</H1>
         <Byline>
           I'm a Los Angeles-based front-end developer who's worked across the
-          stack. I love building cool stuff and learning everything I can in the
-          process{' '}
+          stack. I love building{' '}
+          <Link
+            href="https://github.com/melanieseltzer"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            cool stuff
+          </Link>{' '}
+          and learning everything I can in the process{' '}
           <span role="img" aria-label="rocket">
             🚀
           </span>
@@ -39,7 +41,7 @@ const HeaderWrapper = styled.header`
   flex-direction: column;
   justify-content: center;
   height: auto;
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     height: calc(100vh - 150px);
   }
 `;
@@ -58,7 +60,11 @@ const SVGBottomBorder = styled.div`
 `;
 
 const Container = styled.div`
-  ${container}
+  margin: 50px 20px;
+  max-width: ${maxWidth};
+  @media (min-width: 1024px) {
+    margin: 80px auto 80px auto;
+  }
 `;
 
 const H1 = styled.h1`
@@ -94,4 +100,9 @@ const Byline = styled.p`
     font-size: 1.875rem;
     line-height: 2.875rem;
   }
+`;
+
+const Link = styled.a`
+  color: inherit;
+  text-decoration: none;
 `;
