@@ -1,25 +1,20 @@
 import React from 'react';
-// import { Query } from 'react-apollo';
-// import { gql } from 'apollo-boost';
 import styled from 'styled-components';
 
 import Project from '../Project';
 import Section from '../Section';
 
-// const GET_PROJECTS = gql`
-//   query {
-//     projects(orderBy: createdAt_DESC, where: { status: PUBLISHED }) {
-//       id
-//       title
-//       description
-//       githubLink
-//       liveLink
-//       tags
-//     }
-//   }
-// `;
+interface Projects {
+  projects: {
+    title: string;
+    description: string;
+    githubLink: string;
+    liveLink?: string;
+    tags: string[];
+  };
+}
 
-const Projects = () => (
+const Projects = ({ projects }: Projects) => (
   <Section title="Projects">
     <ProjectsWrapper>
       {/* <Query query={GET_PROJECTS}>

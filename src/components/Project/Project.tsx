@@ -74,10 +74,6 @@ const Title = styled.h3`
   font-size: 1.5rem;
   line-height: 2.2rem;
   font-weight: 400;
-  @media (min-width: 768px) {
-    font-size: 2rem;
-    line-height: 2.7rem;
-  }
 `;
 
 const Description = styled.p`
