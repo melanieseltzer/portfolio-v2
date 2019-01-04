@@ -37,7 +37,7 @@ const Project = ({ project }: Project) => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          Live <IconLive size="1rem" />
+          Live <IconLive size="1.2rem" />
         </ProjectLink>
       )}
       <ProjectLink
@@ -45,7 +45,7 @@ const Project = ({ project }: Project) => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        Code <IconCode size="1rem" />
+        Code <IconCode size="1.2rem" />
       </ProjectLink>
     </Links>
   </ProjectWrapper>
@@ -54,7 +54,7 @@ const Project = ({ project }: Project) => (
 export default Project;
 
 const ProjectWrapper = styled.div`
-  margin-bottom: 3rem;
+  margin: 3rem 0 0 0;
 `;
 
 const ProjectHeader = styled.div`
@@ -67,6 +67,7 @@ const ProjectHeader = styled.div`
   @media (min-width: 500px) {
     flex-direction: row;
     align-items: center;
+    margin-bottom: 0;
   }
 `;
 
@@ -114,7 +115,7 @@ const Links = styled.div`
 const ProjectLink = styled.a`
   display: inline-block;
   font-family: 'Rubik', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: ${COLORS.secondary.dark};
   margin-right: 1rem;
   padding-bottom: 3px;
@@ -124,7 +125,8 @@ const ProjectLink = styled.a`
 const sharedIconStyles = css`
   color: ${COLORS.secondary.dark};
   margin-left: 5px;
-  margin-top: 5px;
+  vertical-align: middle;
+  margin-bottom: 3px;
 `;
 
 const IconLive = styled(IoMdArrowRoundForward)`
