@@ -26,7 +26,7 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/favicon.ico'
+        icon: 'src/images/favicon.png'
       }
     },
     'gatsby-plugin-offline',
@@ -38,7 +38,17 @@ module.exports = {
         fonts: ['Rubik:400', 'lora:400,400i,700']
       }
     },
-    'gatsby-plugin-styled-components'
+    'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        fieldName: 'cms',
+        url:
+          'https://api-uswest.graphcms.com/v1/cjqg22g5m13h901btfhl4juf1/master',
+        typeName: 'GraphCMS',
+        refetchInterval: 60
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

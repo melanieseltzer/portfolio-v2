@@ -52,7 +52,7 @@ const GlobalStyle = createGlobalStyle`
   }
   p {
     font-family: 'Rubik', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
   }
