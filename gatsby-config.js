@@ -42,10 +42,10 @@ module.exports = {
     {
       resolve: 'gatsby-source-graphql',
       options: {
+        typeName: 'GraphCMS',
         fieldName: 'cms',
         url:
           'https://api-uswest.graphcms.com/v1/cjqg22g5m13h901btfhl4juf1/master',
-        typeName: 'GraphCMS',
         refetchInterval: 60
       }
     }
