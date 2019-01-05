@@ -1,8 +1,10 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import { IoIosCode, IoMdArrowRoundForward } from 'react-icons/io';
+import { FiCode } from 'react-icons/fi';
 import styled, { css } from 'styled-components';
-import { IoLogoGithub, IoMdArrowRoundForward } from 'react-icons/io';
 
-import { COLORS } from '../../constants';
+import { COLORS, SharedLinkStyles } from '../../constants';
 import { ProjectType } from '../../constants.d';
 
 const Project = ({
@@ -22,7 +24,9 @@ const Project = ({
       </Tags>
     </ProjectHeader>
 
-    <Description>{description}</Description>
+    <Description>
+      <ReactMarkdown source={description} />
+    </Description>
 
     <Links>
       {liveLink && (
@@ -68,6 +72,12 @@ const Description = styled.p`
   font-weight: 400;
   line-height: 1.5rem;
   margin-top: 0.5rem;
+  a {
+    color: ${COLORS.secondary.dark};
+    text-decoration: none;
+    padding-bottom: 2px;
+    ${SharedLinkStyles}
+  }
 `;
 
 const Tags = styled.div`
@@ -104,8 +114,9 @@ const ProjectLink = styled.a`
   font-size: 1rem;
   color: ${COLORS.secondary.dark};
   margin-right: 1rem;
-  padding-bottom: 3px;
+  padding-bottom: 2px;
   text-decoration: none;
+  ${SharedLinkStyles}
 `;
 
 const sharedIconStyles = css`
@@ -119,6 +130,6 @@ const IconLive = styled(IoMdArrowRoundForward)`
   ${sharedIconStyles}
 `;
 
-const IconCode = styled(IoLogoGithub)`
+const IconCode = styled(FiCode)`
   ${sharedIconStyles}
 `;

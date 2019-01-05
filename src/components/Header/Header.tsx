@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import SVG from '../SVG';
 
-import { COLORS, maxWidth } from '../../constants';
+import { COLORS, maxWidth, SharedLinkStyles } from '../../constants';
 
 const Header = () => (
   <>
@@ -105,4 +105,5 @@ const Byline = styled.p`
 const Link = styled.a`
   color: inherit;
   text-decoration: none;
+  ${SharedLinkStyles}
 `;
