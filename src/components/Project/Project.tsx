@@ -1,50 +1,36 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-// import Markdown from 'react-markdown';
 import { IoLogoGithub, IoMdArrowRoundForward } from 'react-icons/io';
 
 import { COLORS } from '../../constants';
+import { ProjectType } from '../../constants.d';
 
-interface Props {
-  title: string;
-  description: string;
-  githubLink: string;
-  liveLink?: string;
-  tags: string[];
-}
-
-interface Project {
-  project: Props;
-}
-
-const Project = ({ project }: Project) => (
+const Project = ({
+  title,
+  description,
+  githubLink,
+  liveLink,
+  tags
+}: ProjectType) => (
   <ProjectWrapper>
-    {/* title, description, github link, live link, tags */}
     <ProjectHeader>
-      <Title>{project.title}</Title>
+      <Title>{title}</Title>
       <Tags>
-        <Tag>{project.tags[0]}</Tag>
-        <Tag>{project.tags[1]}</Tag>
+        {tags.map(tag => (
+          <Tag key={tag}>{tag}</Tag>
+        ))}
       </Tags>
     </ProjectHeader>
 
-    <Description>{project.description}</Description>
+    <Description>{description}</Description>
 
     <Links>
-      {project.liveLink && (
-        <ProjectLink
-          href={project.liveLink}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      {liveLink && (
+        <ProjectLink href={liveLink} target="_blank" rel="noopener noreferrer">
           Live <IconLive size="1.2rem" />
         </ProjectLink>
       )}
-      <ProjectLink
-        href={project.githubLink}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <ProjectLink href={githubLink} target="_blank" rel="noopener noreferrer">
         Code <IconCode size="1.2rem" />
       </ProjectLink>
     </Links>

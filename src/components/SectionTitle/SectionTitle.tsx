@@ -2,8 +2,6 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { FiBookOpen, FiPackage } from 'react-icons/fi';
 
-import { COLORS } from '../../constants';
-
 interface Props {
   title: string;
 }
