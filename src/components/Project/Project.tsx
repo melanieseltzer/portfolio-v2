@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { IoIosCode, IoMdArrowRoundForward } from 'react-icons/io';
+import { FiCode } from 'react-icons/fi';
 import styled, { css } from 'styled-components';
 
 import { COLORS, SharedLinkStyles } from '../../constants';
@@ -129,6 +130,6 @@ const IconLive = styled(IoMdArrowRoundForward)`
   ${sharedIconStyles}
 `;
 
-const IconCode = styled(IoIosCode)`
+const IconCode = styled(FiCode)`
   ${sharedIconStyles}
 `;
