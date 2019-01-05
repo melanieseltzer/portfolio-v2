@@ -36,11 +36,16 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
   p {
     font-family: 'Rubik', sans-serif;
     font-size: 1rem;
     font-style: normal;
     font-weight: 400;
+    line-height: 1.6rem;
   }
   h1, h2, h3, h4 {
     font-family: 'Lora', sans-serif;

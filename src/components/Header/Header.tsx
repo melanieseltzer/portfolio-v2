@@ -97,7 +97,6 @@ const Byline = styled.p`
 `;
 
 const Link = styled.a`
-  color: inherit;
-  text-decoration: none;
+  padding-bottom: 2px;
   ${SharedLinkStyles}
 `;

@@ -2,10 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql, StaticQuery } from 'gatsby';
 
-import Project from '../Project';
+import Content from '../Content';
 import Section from '../Section';
 
-import { ProjectType } from '../../constants.d';
+export interface Project {
+  title: string;
+  description: string;
+  githubLink: string;
+  liveLink?: string;
+  tags: string[];
+}
 
 const Projects = () => (
   <Section title="Projects">
@@ -29,8 +35,8 @@ const Projects = () => (
           if (!data.cms) {
             return <p>Loading...</p>;
           }
-          return data.cms.projects.map((project: ProjectType) => (
-            <Project
+          return data.cms.projects.map((project: Project) => (
+            <Content
               key={project.title}
               title={project.title}
               description={project.description}
