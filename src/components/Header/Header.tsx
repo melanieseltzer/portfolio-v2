@@ -41,9 +41,6 @@ const HeaderWrapper = styled.header`
   flex-direction: column;
   justify-content: center;
   height: auto;
-  @media (min-width: 1025px) {
-    height: calc(100vh - 150px);
-  }
 `;
 
 const SVGBottomBorder = styled.div`
@@ -53,9 +50,6 @@ const SVGBottomBorder = styled.div`
   width: 100%;
   @media (min-width: 414px) {
     height: 100px;
-  }
-  @media (min-width: 768px) {
-    height: 150px;
   }
 `;
 

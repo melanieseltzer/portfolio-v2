@@ -20,7 +20,7 @@ const Section = ({ title, children }: Props) => (
 export default Section;
 
 const SectionStyled = styled.section`
-  margin: 50px 20px;
+  margin: 0 20px 4rem 20px;
   max-width: ${maxWidth};
   @media (min-width: 1024px) {
     margin: 0 auto 80px auto;

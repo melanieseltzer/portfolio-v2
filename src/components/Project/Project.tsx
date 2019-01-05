@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import { IoIosCode, IoMdArrowRoundForward } from 'react-icons/io';
+import { IoMdArrowRoundForward } from 'react-icons/io';
 import { FiCode } from 'react-icons/fi';
 import styled, { css } from 'styled-components';
 
@@ -44,7 +44,7 @@ const Project = ({
 export default Project;
 
 const ProjectWrapper = styled.div`
-  margin: 3rem 0 0 0;
+  margin: 0 0 4rem 0;
 `;
 
 const ProjectHeader = styled.div`
@@ -67,7 +67,7 @@ const Title = styled.h3`
   font-weight: 400;
 `;
 
-const Description = styled.p`
+const Description = styled.div`
   color: ${COLORS.secondary.light};
   font-weight: 400;
   line-height: 1.5rem;
@@ -114,7 +114,6 @@ const ProjectLink = styled.a`
   font-size: 1rem;
   color: ${COLORS.secondary.dark};
   margin-right: 1rem;
-  padding-bottom: 2px;
   text-decoration: none;
   ${SharedLinkStyles}
 `;
