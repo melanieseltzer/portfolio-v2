@@ -4,50 +4,84 @@ import { IoMdArrowRoundForward } from 'react-icons/io';
 import { FiCode } from 'react-icons/fi';
 import styled, { css } from 'styled-components';
 
-import { COLORS, SharedLinkStyles } from '../../constants';
-import { ProjectType } from '../../constants.d';
+import { COLORS, mediumUsername, SharedLinkStyles } from '../../constants';
 
-const Project = ({
+export interface ContentType {
+  title: string;
+  description?: string;
+  githubLink?: string;
+  liveLink?: string;
+  tags: string[];
+  slug?: string;
+}
+
+type IsPost = {
+  isPost: boolean;
+};
+
+// A versatile component that renders both projects and posts. The data is passed in
+// from GraphQL queries (projects are sourced from GraphCMS and posts from Medium.com).
+const Content = ({
   title,
   description,
   githubLink,
   liveLink,
-  tags
-}: ProjectType) => (
-  <ProjectWrapper>
-    <ProjectHeader>
-      <Title>{title}</Title>
-      <Tags>
+  tags,
+  slug
+}: ContentType) => (
+  // If there's a slug then it's a post, so need to do some styling with isPost
+  <ContentWrapper isPost={!!slug}>
+    <ContentHeader>
+      {slug ? (
+        <Link
+          href={`https://medium.com/${mediumUsername}/${slug}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Title>{title}</Title>
+        </Link>
+      ) : (
+        <Title>{title}</Title>
+      )}
+      <Tags isPost={!!slug}>
         {tags.map(tag => (
           <Tag key={tag}>{tag}</Tag>
         ))}
       </Tags>
-    </ProjectHeader>
+    </ContentHeader>
 
-    <Description>
-      <ReactMarkdown source={description} />
-    </Description>
+    {description && (
+      <Description>
+        <ReactMarkdown source={description} />
+      </Description>
+    )}
 
     <Links>
       {liveLink && (
-        <ProjectLink href={liveLink} target="_blank" rel="noopener noreferrer">
+        <ContentLink href={liveLink} target="_blank" rel="noopener noreferrer">
           Live <IconLive size="1.2rem" />
-        </ProjectLink>
+        </ContentLink>
       )}
-      <ProjectLink href={githubLink} target="_blank" rel="noopener noreferrer">
-        Code <IconCode size="1.2rem" />
-      </ProjectLink>
+      {githubLink && (
+        <ContentLink
+          href={githubLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Code <IconCode size="1.2rem" />
+        </ContentLink>
+      )}
     </Links>
-  </ProjectWrapper>
+  </ContentWrapper>
 );
 
-export default Project;
+export default Content;
 
-const ProjectWrapper = styled.div`
-  margin: 0 0 4rem 0;
+const ContentWrapper = styled.div`
+  margin: ${({ isPost }: IsPost) => (isPost ? '0 0 1.5rem 0' : '0 0 4rem 0')};
 `;
 
-const ProjectHeader = styled.div`
+const ContentHeader = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -62,9 +96,17 @@ const ProjectHeader = styled.div`
 `;
 
 const Title = styled.h3`
-  font-size: 1.5rem;
-  line-height: 2.2rem;
+  font-size: 1.3rem;
+  line-height: 2rem;
   font-weight: 400;
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+`;
+
+const Link = styled.a`
+  ${SharedLinkStyles}
 `;
 
 const Description = styled.div`
@@ -74,14 +116,13 @@ const Description = styled.div`
   margin-top: 0.5rem;
   a {
     color: ${COLORS.secondary.dark};
-    text-decoration: none;
     padding-bottom: 2px;
     ${SharedLinkStyles}
   }
 `;
 
 const Tags = styled.div`
-  margin-top: 0.8rem;
+  margin-top: ${({ isPost }: IsPost) => (isPost ? '1rem' : '0.5rem')};
   @media (min-width: 500px) {
     margin-top: 0;
   }
@@ -108,13 +149,13 @@ const Links = styled.div`
   margin-top: 1rem;
 `;
 
-const ProjectLink = styled.a`
+const ContentLink = styled.a`
   display: inline-block;
   font-family: 'Rubik', sans-serif;
   font-size: 1rem;
   color: ${COLORS.secondary.dark};
   margin-right: 1rem;
-  text-decoration: none;
+  padding-bottom: 2px;
   ${SharedLinkStyles}
 `;
 

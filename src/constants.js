@@ -11,8 +11,10 @@ export const COLORS = {
 // Breakpoints and sizes
 export const maxWidth = '900px';
 
+// Shared CSS
 export const SharedLinkStyles = css`
-  background: linear-gradient(
+  display: inline;
+  background-image: linear-gradient(
     to left,
     ${COLORS.accent.blue},
     ${COLORS.accent.purple}
@@ -25,3 +27,6 @@ export const SharedLinkStyles = css`
     background-position: left bottom;
   }
 `;
+
+// Random stuff
+export const mediumUsername = 'melanieseltzer';
