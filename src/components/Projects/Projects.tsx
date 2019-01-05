@@ -14,7 +14,7 @@ const Projects = () => (
         query={graphql`
           query {
             cms {
-              projects(orderBy: createdAt_ASC, where: { status: PUBLISHED }) {
+              projects(orderBy: createdAt_DESC, where: { status: PUBLISHED }) {
                 id
                 title
                 description

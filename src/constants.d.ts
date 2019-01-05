@@ -1,6 +1,6 @@
 export declare const COLORS;
 export declare const maxWidth;
-export declare const container;
+export declare const SharedLinkStyles;
 
 export interface ProjectType {
   title: string;
