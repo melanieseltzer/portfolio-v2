@@ -20,7 +20,7 @@ const Header = () => (
           >
             cool stuff
           </Link>{' '}
-          and learning everything I can in the process{' '}
+          with React and Node while learning everything I can in the process{' '}
           <span role="img" aria-label="rocket">
             🚀
           </span>
