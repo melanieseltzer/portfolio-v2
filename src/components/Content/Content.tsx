@@ -59,7 +59,7 @@ const Content = ({
     <Links>
       {liveLink && (
         <ContentLink href={liveLink} target="_blank" rel="noopener noreferrer">
-          Live <IconLive size="1.2rem" />
+          Live <IconLive size="1.2em" />
         </ContentLink>
       )}
       {githubLink && (
@@ -68,7 +68,7 @@ const Content = ({
           target="_blank"
           rel="noopener noreferrer"
         >
-          Code <IconCode size="1.2rem" />
+          Code <IconCode size="1.2em" />
         </ContentLink>
       )}
     </Links>

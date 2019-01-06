@@ -9,9 +9,9 @@ interface Props {
 const Title = ({ title }: Props) => (
   <H2>
     {title === 'Projects' ? (
-      <IconProjects size="1.5rem" />
+      <IconProjects size="1em" />
     ) : (
-      <IconPosts size="1.5rem" />
+      <IconPosts size="1em" />
     )}
     {title}
   </H2>

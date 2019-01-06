@@ -25,7 +25,7 @@ const Footer = () => (
             <FaGithub
               color={COLORS.secondary.light}
               aria-labelledby="GitHub"
-              size="1.8rem"
+              size="1.8em"
             />
           </Link>
         </Icon>
@@ -39,7 +39,7 @@ const Footer = () => (
             <FaCodepen
               color={COLORS.secondary.light}
               aria-labelledby="Codepen"
-              size="1.8rem"
+              size="1.8em"
             />
           </Link>
         </Icon>
@@ -53,7 +53,7 @@ const Footer = () => (
             <FaTwitter
               color={COLORS.secondary.light}
               aria-labelledby="Twitter"
-              size="1.8rem"
+              size="1.8em"
             />
           </Link>
         </Icon>
@@ -67,7 +67,7 @@ const Footer = () => (
             <FaMedium
               color={COLORS.secondary.light}
               aria-labelledby="Medium"
-              size="1.8rem"
+              size="1.8em"
             />
           </Link>
         </Icon>
@@ -81,7 +81,7 @@ const Footer = () => (
             <FaLinkedin
               color={COLORS.secondary.light}
               aria-labelledby="LinkedIn"
-              size="1.8rem"
+              size="1.8em"
             />
           </Link>
         </Icon>
@@ -95,7 +95,7 @@ const Footer = () => (
             <FaEnvelope
               color={COLORS.secondary.light}
               aria-labelledby="Email"
-              size="1.8rem"
+              size="1.8em"
             />
           </Link>
         </Icon>
