@@ -1,0 +1,14 @@
+[[redirects]]
+  from = "https://melanieseltzer-v2.netlify.com/*"
+  to = "https://www.melanieseltzer.com/:splat"
+  force = true
+
+[[redirects]]
+  from = "https://melanieseltzer.com/*"
+  to = "https://www.melanieseltzer.com/:splat"
+  force = true
+
+[[redirects]]
+  from = "http://melanieseltzer.com/*"
+  to = "https://www.melanieseltzer.com/:splat"
+  force = true
