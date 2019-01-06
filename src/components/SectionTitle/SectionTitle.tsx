@@ -8,11 +8,8 @@ interface Props {
 
 const Title = ({ title }: Props) => (
   <H2>
-    {title === 'Projects' ? (
-      <IconProjects size="1em" />
-    ) : (
-      <IconPosts size="1em" />
-    )}
+    {title === 'Projects' && <IconProjects size="1em" />}
+    {title === 'Recent Posts' && <IconPosts size="1em" />}
     {title}
   </H2>
 );

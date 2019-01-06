@@ -44,13 +44,10 @@ const HeaderWrapper = styled.header`
 `;
 
 const SVGBottomBorder = styled.div`
-  height: 50px;
+  height: 100px;
   overflow: hidden;
   position: relative;
   width: 100%;
-  @media (min-width: 414px) {
-    height: 100px;
-  }
 `;
 
 const Container = styled.div`
