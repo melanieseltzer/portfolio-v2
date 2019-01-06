@@ -19,7 +19,7 @@ export const SharedLinkStyles = css`
     ${COLORS.accent.blue},
     ${COLORS.accent.purple}
   );
-  background-size: 200% 3px;
+  background-size: 200% 2px;
   background-repeat: no-repeat;
   background-position: right bottom;
   transition: all 0.5s ease;
