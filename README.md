@@ -4,6 +4,10 @@
 
 Welcome to the second version of my dev portfolio 👋 It is built with the amazing [GatsbyJS](https://www.gatsbyjs.org/) and contains my projects and contact info.
 
+## Live Site
+
+https://www.melanieseltzer.com
+
 ## Local Development 🚀
 
 Start the dev server:
