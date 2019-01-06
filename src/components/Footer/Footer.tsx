@@ -24,9 +24,10 @@ const Footer = () => (
           >
             <FaGithub
               color={COLORS.secondary.light}
-              aria-labelledby="GitHub"
+              aria-labelledby="github"
               size="1.8em"
             />
+            <title id="github">Link to GitHub</title>
           </Link>
         </Icon>
         <Icon>
@@ -38,9 +39,10 @@ const Footer = () => (
           >
             <FaCodepen
               color={COLORS.secondary.light}
-              aria-labelledby="Codepen"
+              aria-labelledby="codepen"
               size="1.8em"
             />
+            <title id="codepen">Link to Codepen</title>
           </Link>
         </Icon>
         <Icon>
@@ -52,9 +54,10 @@ const Footer = () => (
           >
             <FaTwitter
               color={COLORS.secondary.light}
-              aria-labelledby="Twitter"
+              aria-labelledby="twitter"
               size="1.8em"
             />
+            <title id="twitter">Link to Twitter</title>
           </Link>
         </Icon>
         <Icon>
@@ -66,9 +69,10 @@ const Footer = () => (
           >
             <FaMedium
               color={COLORS.secondary.light}
-              aria-labelledby="Medium"
+              aria-labelledby="medium"
               size="1.8em"
             />
+            <title id="medium">Link to Medium</title>
           </Link>
         </Icon>
         <Icon>
@@ -80,9 +84,10 @@ const Footer = () => (
           >
             <FaLinkedin
               color={COLORS.secondary.light}
-              aria-labelledby="LinkedIn"
+              aria-labelledby="linkedin"
               size="1.8em"
             />
+            <title id="linkedin">Link to LinkedIn</title>
           </Link>
         </Icon>
         <Icon>
@@ -94,9 +99,10 @@ const Footer = () => (
           >
             <FaEnvelope
               color={COLORS.secondary.light}
-              aria-labelledby="Email"
+              aria-labelledby="email"
               size="1.8em"
             />
+            <title id="email">Link to Email</title>
           </Link>
         </Icon>
       </IconList>

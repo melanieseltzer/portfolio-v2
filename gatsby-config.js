@@ -33,9 +33,11 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-tslint',
     {
-      resolve: 'gatsby-plugin-google-fonts',
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        fonts: ['Rubik:400', 'lora:400,400i,700']
+        google: {
+          families: ['Rubik:400', 'Lora:400,400i,700']
+        }
       }
     },
     'gatsby-plugin-styled-components',
