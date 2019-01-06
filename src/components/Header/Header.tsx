@@ -97,6 +97,5 @@ const Byline = styled.p`
 `;
 
 const Link = styled.a`
-  padding-bottom: 2px;
   ${SharedLinkStyles}
 `;

@@ -29,19 +29,24 @@ const H2 = styled.h2`
   position: relative;
   &:before {
     content: '';
-    width: 2.5rem;
+    width: 4rem;
     height: 1px;
-    background-color: #bbb;
+    background-color: #9ca2b7;
     display: inline-block;
     position: absolute;
     top: 50%;
-    left: -50px;
+    left: -70px;
+  }
+  @media (min-width: 1024px) {
+    &:before {
+      left: -80px;
+    }
   }
 `;
 
 const SharedIconStyle = css`
   color: #666;
-  margin: 0 13px 0 7px;
+  margin: 0 13px 0 0;
 `;
 
 const IconProjects = styled(FiPackage)`
