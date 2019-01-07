@@ -48,7 +48,7 @@ module.exports = {
         fieldName: 'cms',
         url:
           'https://api-uswest.graphcms.com/v1/cjqg22g5m13h901btfhl4juf1/master',
-        refetchInterval: 60
+        refetchInterval: 10
       }
     },
     {

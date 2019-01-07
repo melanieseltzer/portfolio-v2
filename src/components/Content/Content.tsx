@@ -115,9 +115,10 @@ const Description = styled.div`
   line-height: 1.5rem;
   margin-top: 0.5rem;
   a {
-    color: ${COLORS.secondary.dark};
-    padding-bottom: 2px;
-    ${SharedLinkStyles}
+    color: ${COLORS.primary.dark};
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `;
 
