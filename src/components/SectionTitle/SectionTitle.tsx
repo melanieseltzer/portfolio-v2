@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { FiBookOpen, FiPackage } from 'react-icons/fi';
+import { FiBookOpen, FiPackage, FiStar } from 'react-icons/fi';
 
 interface Props {
   title: string;
@@ -10,6 +10,7 @@ const Title = ({ title }: Props) => (
   <H2>
     {title === 'Projects' && <IconProjects size="1em" />}
     {title === 'Recent Posts' && <IconPosts size="1em" />}
+    {title === 'About' && <IconAbout size="1em" />}
     {title}
   </H2>
 );
@@ -22,7 +23,7 @@ const H2 = styled.h2`
   font-size: 1.6rem;
   font-style: italic;
   font-weight: 400;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   position: relative;
   &:before {
     content: '';
@@ -51,5 +52,9 @@ const IconProjects = styled(FiPackage)`
 `;
 
 const IconPosts = styled(FiBookOpen)`
+  ${SharedIconStyle}
+`;
+
+const IconAbout = styled(FiStar)`
   ${SharedIconStyle}
 `;
