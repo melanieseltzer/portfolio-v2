@@ -1,5 +1,6 @@
 import React from 'react';
 
+import About from '../components/About';
 import Layout from '../components/Layout';
 import Posts from '../components/Posts';
 import Projects from '../components/Projects';
@@ -10,6 +11,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <Projects />
     <Posts />
+    <About />
   </Layout>
 );
 

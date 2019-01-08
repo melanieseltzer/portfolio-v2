@@ -23,12 +23,12 @@ const SectionStyled = styled.section`
   margin: 0 20px 4rem 20px;
   max-width: ${maxWidth};
   @media (min-width: 940px) {
-    margin: 0 auto 80px auto;
+    margin: 0 auto 4rem auto;
   }
   @media (min-width: 1024px) {
-    margin: 0 100px 80px 100px;
+    margin: 0 100px 4rem 100px;
   }
   @media (min-width: 1080px) {
-    margin: 0 auto 80px auto;
+    margin: 0 auto 4rem auto;
   }
 `;
