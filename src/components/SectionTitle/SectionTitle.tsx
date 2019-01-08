@@ -6,11 +6,25 @@ interface Props {
   title: string;
 }
 
+// Render an icon depending on page section
+const renderIcon = (title: string) => {
+  const iconSize = '1em';
+
+  switch (title) {
+    case 'Projects':
+      return <IconProjects size={iconSize} />;
+    case 'Recent Posts':
+      return <IconPosts size={iconSize} />;
+    case 'About':
+      return <IconAbout size={iconSize} />;
+    default:
+      return '';
+  }
+};
+
 const Title = ({ title }: Props) => (
   <H2>
-    {title === 'Projects' && <IconProjects size="1em" />}
-    {title === 'Recent Posts' && <IconPosts size="1em" />}
-    {title === 'About' && <IconAbout size="1em" />}
+    {renderIcon(title)}
     {title}
   </H2>
 );
