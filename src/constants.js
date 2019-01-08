@@ -30,3 +30,31 @@ export const SharedLinkStyles = css`
 
 // Random stuff
 export const mediumUsername = 'melanieseltzer';
+
+// Social media info for render in Footer component
+export const socials = [
+  {
+    name: 'GitHub',
+    link: 'https://github.com/melanieseltzer'
+  },
+  {
+    name: 'Twitter',
+    link: 'https://twitter.com/melanieseltzer'
+  },
+  {
+    name: 'Codepen',
+    link: 'https://codepen.io/melanieseltzer'
+  },
+  {
+    name: 'Medium',
+    link: 'https://medium.com/@melanieseltzer'
+  },
+  {
+    name: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/melanieseltzer'
+  },
+  {
+    name: 'Email',
+    link: 'mailto:melleh11@gmail.com'
+  }
+];

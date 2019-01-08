@@ -1,110 +1,87 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-  FaCodepen,
-  FaEnvelope,
-  FaGithub,
-  FaLinkedin,
-  FaMedium,
-  FaTwitter
-} from 'react-icons/fa';
+import * as FontAwesome from 'react-icons/fa';
 
-import { COLORS } from '../../constants';
+import { COLORS, socials } from '../../constants';
+
+interface Social {
+  name: string;
+  link: string;
+}
+
+// Render the correct social icon
+const renderIcon = (name: string) => {
+  const iconSize = '1.8em';
+
+  switch (name) {
+    case 'GitHub':
+      return (
+        <FontAwesome.FaGithub
+          color={COLORS.secondary.light}
+          aria-labelledby="github"
+          size={iconSize}
+        />
+      );
+    case 'Twitter':
+      return (
+        <FontAwesome.FaTwitter
+          color={COLORS.secondary.light}
+          aria-labelledby="twitter"
+          size={iconSize}
+        />
+      );
+    case 'Codepen':
+      return (
+        <FontAwesome.FaCodepen
+          color={COLORS.secondary.light}
+          aria-labelledby="codepen"
+          size={iconSize}
+        />
+      );
+    case 'Medium':
+      return (
+        <FontAwesome.FaMedium
+          color={COLORS.secondary.light}
+          aria-labelledby="medium"
+          size={iconSize}
+        />
+      );
+    case 'LinkedIn':
+      return (
+        <FontAwesome.FaLinkedin
+          color={COLORS.secondary.light}
+          aria-labelledby="linkedin"
+          size={iconSize}
+        />
+      );
+    case 'Email':
+      return (
+        <FontAwesome.FaEnvelope
+          color={COLORS.secondary.light}
+          aria-labelledby="email"
+          size={iconSize}
+        />
+      );
+    default:
+      return '';
+  }
+};
+
+// Construct the social media links by mapping over the social array
+const renderSocial = ({ name, link }: Social) => (
+  <Icon key={name}>
+    <Link href={link} target="_blank" rel="noopener noreferrer" role="button">
+      {renderIcon(name)}
+      <title id={name.toLowerCase()}>Link to {name}</title>
+    </Link>
+  </Icon>
+);
 
 const Footer = () => (
   <FooterWrapper>
     <FooterIcons>
       <IconList>
-        <Icon>
-          <Link
-            href="https://github.com/melanieseltzer"
-            target="_blank"
-            rel="noopener noreferrer"
-            role="button"
-          >
-            <FaGithub
-              color={COLORS.secondary.light}
-              aria-labelledby="github"
-              size="1.8em"
-            />
-            <title id="github">Link to GitHub</title>
-          </Link>
-        </Icon>
-        <Icon>
-          <Link
-            href="https://codepen.io/melanieseltzer"
-            target="_blank"
-            rel="noopener noreferrer"
-            role="button"
-          >
-            <FaCodepen
-              color={COLORS.secondary.light}
-              aria-labelledby="codepen"
-              size="1.8em"
-            />
-            <title id="codepen">Link to Codepen</title>
-          </Link>
-        </Icon>
-        <Icon>
-          <Link
-            href="https://twitter.com/melanieseltzer"
-            target="_blank"
-            rel="noopener noreferrer"
-            role="button"
-          >
-            <FaTwitter
-              color={COLORS.secondary.light}
-              aria-labelledby="twitter"
-              size="1.8em"
-            />
-            <title id="twitter">Link to Twitter</title>
-          </Link>
-        </Icon>
-        <Icon>
-          <Link
-            href="https://medium.com/@melanieseltzer"
-            target="_blank"
-            rel="noopener noreferrer"
-            role="button"
-          >
-            <FaMedium
-              color={COLORS.secondary.light}
-              aria-labelledby="medium"
-              size="1.8em"
-            />
-            <title id="medium">Link to Medium</title>
-          </Link>
-        </Icon>
-        <Icon>
-          <Link
-            href="https://www.linkedin.com/in/melanieseltzer"
-            target="_blank"
-            rel="noopener noreferrer"
-            role="button"
-          >
-            <FaLinkedin
-              color={COLORS.secondary.light}
-              aria-labelledby="linkedin"
-              size="1.8em"
-            />
-            <title id="linkedin">Link to LinkedIn</title>
-          </Link>
-        </Icon>
-        <Icon>
-          <Link
-            href="mailto:melleh11@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            role="button"
-          >
-            <FaEnvelope
-              color={COLORS.secondary.light}
-              aria-labelledby="email"
-              size="1.8em"
-            />
-            <title id="email">Link to Email</title>
-          </Link>
-        </Icon>
+        {socials.map((social: Social) => renderSocial(social))}
       </IconList>
     </FooterIcons>
     <Copyright>
