@@ -9,7 +9,7 @@ const Projects = () => (
   <Section title="About">
     <ProjectsWrapper>
       <p>
-        I'm a web developer with 8 years indutry experience, currently working
+        I'm a web developer with 8 years industry experience, currently working
         as lead developer at{' '}
         <Link
           href="http://still-water.com/"
