@@ -78,7 +78,7 @@ const Content = ({
 export default Content;
 
 const ContentWrapper = styled.div`
-  margin: ${({ isPost }: IsPost) => (isPost ? '0 0 1.5rem 0' : '0 0 2rem 0')};
+  margin: ${({ isPost }: IsPost) => (isPost ? '2rem 0' : '3rem 0')};
 `;
 
 const ContentHeader = styled.div`
