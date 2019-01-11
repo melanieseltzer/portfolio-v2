@@ -25,7 +25,11 @@ const Projects = () => (
       </p>
 
       <p>
-        I currently live in Los Angeles, CA with my wife and our pet cat,
+        I'm from Australia{' '}
+        <span role="img" aria-label="australian flag">
+          🇦🇺
+        </span>{' '}
+        and am currently living in Los Angeles, CA with my wife and our pet cat,
         Callie. When I'm not coding, you can probably find me playing video
         games, hiking, traveling somewhere new, wasting copious amounts of time
         on Reddit, or playing with (annoying) Callie.
