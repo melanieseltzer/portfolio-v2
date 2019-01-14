@@ -43,7 +43,7 @@ const Content = ({
       ) : (
         <Title>{title}</Title>
       )}
-      <Tags isPost={!!slug}>
+      <Tags>
         {tags.map(tag => (
           <Tag key={tag}>{tag}</Tag>
         ))}
@@ -123,24 +123,24 @@ const Description = styled.div`
 `;
 
 const Tags = styled.div`
-  margin-top: ${({ isPost }: IsPost) => (isPost ? '1rem' : '0.5rem')};
+  margin-top: 0.5rem;
   @media (min-width: 500px) {
     margin-top: 0;
   }
 `;
 
 const Tag = styled.span`
-  text-align: center;
+  background-color: ${COLORS.primary.light};
+  border-radius: 3px;
+  color: ${COLORS.primary.dark};
+  display: inline-block;
   font-family: 'Rubik', sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
-  letter-spacing: 0.01em;
-  color: ${COLORS.primary.dark};
-  padding: 0.5em;
-  background-color: ${COLORS.primary.light};
-  border-radius: 3px;
   margin-top: 0.5rem;
   margin-right: 0.5rem;
+  padding: 0.5em;
+  text-align: center;
   @media (min-width: 500px) {
     margin-left: 0.5rem;
   }
