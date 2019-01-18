@@ -33,13 +33,15 @@ const Content = ({
   <ContentWrapper isPost={!!slug}>
     <ContentHeader>
       {slug ? (
-        <Link
-          href={`https://medium.com/${mediumUsername}/${slug}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Title>{title}</Title>
-        </Link>
+        <Title>
+          <Link
+            href={`https://medium.com/${mediumUsername}/${slug}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {title}
+          </Link>
+        </Title>
       ) : (
         <Title>{title}</Title>
       )}
@@ -106,7 +108,8 @@ const Title = styled.h3`
 `;
 
 const Link = styled.a`
-  ${SharedLinkStyles}
+  padding-bottom: 2px;
+  ${SharedLinkStyles};
 `;
 
 const Description = styled.div`
@@ -124,6 +127,7 @@ const Description = styled.div`
 
 const Tags = styled.div`
   margin-top: 0.5rem;
+  text-align: right;
   @media (min-width: 500px) {
     margin-top: 0;
   }
