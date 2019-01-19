@@ -2,13 +2,15 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { FiBookOpen, FiPackage, FiStar } from 'react-icons/fi';
 
+import { COLORS } from '../../constants';
+
 interface Props {
   title: string;
 }
 
 // Render an icon depending on page section
 const renderIcon = (title: string) => {
-  const iconSize = '1em';
+  const iconSize = '0.9em';
 
   switch (title) {
     case 'Projects':
@@ -32,27 +34,30 @@ const Title = ({ title }: Props) => (
 export default Title;
 
 const H2 = styled.h2`
-  display: flex;
+  display: inline-block;
   align-items: center;
   font-size: 1.6rem;
   font-style: italic;
   font-weight: 400;
-  margin-bottom: 2rem;
   position: relative;
-  &:before {
+  svg {
+    padding-top: 2px;
+  }
+  &:before,
+  &:after {
     content: '';
-    width: 4rem;
-    height: 1px;
-    background-color: #9ca2b7;
+    background-color: ${COLORS.lineColor};
     display: inline-block;
+    height: 1px;
     position: absolute;
     top: 50%;
+    width: 3rem;
+  }
+  &:before {
     left: -70px;
   }
-  @media (min-width: 1024px) {
-    &:before {
-      left: -80px;
-    }
+  &:after {
+    right: -70px;
   }
 `;
 

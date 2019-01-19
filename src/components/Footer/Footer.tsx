@@ -114,7 +114,7 @@ const FooterIcons = styled.div`
       display: block;
       width: 1px;
       height: 80px;
-      background-color: #9ca2b7;
+      background-color: ${COLORS.lineColor};
       margin: 0px auto;
     }
   }
