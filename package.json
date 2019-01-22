@@ -47,6 +47,7 @@
     "@types/styled-components": "^4.1.5",
     "gatsby": "^2.0.91",
     "gatsby-image": "^2.0.26",
+    "gatsby-plugin-canonical-urls": "^2.0.8",
     "gatsby-plugin-manifest": "^2.0.9",
     "gatsby-plugin-offline": "^2.0.21",
     "gatsby-plugin-react-helmet": "^3.0.2",
