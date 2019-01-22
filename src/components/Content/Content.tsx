@@ -6,7 +6,7 @@ import styled, { css } from 'styled-components';
 
 import { COLORS, mediumUsername, SharedLinkStyles } from '../../constants';
 
-export interface ContentType {
+interface ContentType {
   title: string;
   description?: string;
   githubLink?: string;
@@ -29,11 +29,12 @@ const Content = ({
   tags,
   slug
 }: ContentType) => (
-  // If there's a slug then it's a post, so need to do some styling with isPost
+  // Check if it's a post for styling tweaks
   <ContentWrapper isPost={!!slug}>
     <ContentHeader>
       {slug ? (
         <Title>
+          {/* Only link the title for posts */}
           <Link
             href={`https://medium.com/${mediumUsername}/${slug}`}
             target="_blank"
@@ -45,7 +46,8 @@ const Content = ({
       ) : (
         <Title>{title}</Title>
       )}
-      <Tags>
+      {/* Check if it's a post for styling tweaks */}
+      <Tags isPost={!!slug}>
         {tags.map(tag => (
           <Tag key={tag}>{tag}</Tag>
         ))}
@@ -126,7 +128,7 @@ const Description = styled.div`
 `;
 
 const Tags = styled.div`
-  margin-top: 0.5rem;
+  margin-top: ${({ isPost }: IsPost) => (isPost ? '0.5rem' : '0')};
   text-align: right;
   @media (min-width: 500px) {
     margin-top: 0;
@@ -143,7 +145,7 @@ const Tag = styled.span`
   font-weight: 400;
   margin-top: 0.5rem;
   margin-right: 0.5rem;
-  padding: 0.5em;
+  padding: 0.5rem;
   text-align: center;
   @media (min-width: 500px) {
     margin-left: 0.5rem;
