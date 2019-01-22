@@ -7,6 +7,12 @@ module.exports = {
     author: 'Melanie Seltzer'
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://www.melanieseltzer.com'
+      }
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
