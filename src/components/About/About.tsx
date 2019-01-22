@@ -10,15 +10,7 @@ const Projects = () => (
     <ProjectsWrapper>
       <p>
         I'm a web developer with 8 years industry experience, currently working
-        as lead developer at{' '}
-        <Link
-          href="http://still-water.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Still Water
-        </Link>
-        , primarily in the front-end. I enjoy creating clean, intuitive and
+        primarily in the front-end. I enjoy creating clean, intuitive and
         performant sites and apps, and over my career have worked with a variety
         of technologies across the stack. I enjoy tinkering and love
         contributing to open source.
