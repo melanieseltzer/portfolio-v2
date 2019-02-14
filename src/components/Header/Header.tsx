@@ -10,28 +10,26 @@ const Header = () => (
   <>
     <HeaderWrapper>
       <Container>
-        <Content>
-          <H1>Hi! I'm Melanie.</H1>
-          <Byline>
-            I'm a Los Angeles-based front-end developer who's worked across the
-            stack. I love building{' '}
-            <Link
-              href="https://github.com/melanieseltzer"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              cool stuff
-            </Link>{' '}
-            with React and Node while learning everything I can in the process{' '}
-            <span role="img" aria-label="rocket">
-              🚀
-            </span>
-          </Byline>
-          <ImageWrapper>
-            {/* Thanks undraw.co! */}
-            <img src={Computer} alt="Computer" />
-          </ImageWrapper>
-        </Content>
+        <H1>Hi! I'm Melanie.</H1>
+        <Byline>
+          I'm a Los Angeles-based front-end developer who's worked across the
+          stack. I love building{' '}
+          <Link
+            href="https://github.com/melanieseltzer"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            cool stuff
+          </Link>{' '}
+          with React and Node while learning everything I can in the process{' '}
+          <span role="img" aria-label="rocket">
+            🚀
+          </span>
+        </Byline>
+        <ImageWrapper>
+          {/* Thanks undraw.co! */}
+          <img src={Computer} alt="Computer" />
+        </ImageWrapper>
       </Container>
     </HeaderWrapper>
     <SVGBottomBorder>
@@ -62,15 +60,12 @@ const SVGBottomBorder = styled.div`
 `;
 
 const Container = styled.div`
+  position: relative;
   margin: 50px 20px;
   max-width: ${maxWidth};
   @media (min-width: 1024px) {
     margin: 80px auto 30px auto;
   }
-`;
-
-const Content = styled.div`
-  position: relative;
 `;
 
 const ImageWrapper = styled.div`
@@ -115,6 +110,9 @@ const Byline = styled.p`
   @media (min-width: 768px) {
     font-size: 1.4rem;
     line-height: 2.4rem;
+  }
+  @media (min-width: 768px) {
+    max-width: 90%;
   }
   @media (min-width: 1024px) {
     max-width: 60%;
