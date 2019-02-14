@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Computer from '../../images/undraw_Working_32n9.svg';
 import SVG from '../SVG';
 
 import { COLORS, maxWidth, SharedLinkStyles } from '../../constants';
@@ -9,22 +10,28 @@ const Header = () => (
   <>
     <HeaderWrapper>
       <Container>
-        <H1>Hi! I'm Melanie.</H1>
-        <Byline>
-          I'm a Los Angeles-based front-end developer who's worked across the
-          stack. I love building{' '}
-          <Link
-            href="https://github.com/melanieseltzer"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            cool stuff
-          </Link>{' '}
-          with React and Node while learning everything I can in the process{' '}
-          <span role="img" aria-label="rocket">
-            🚀
-          </span>
-        </Byline>
+        <Content>
+          <H1>Hi! I'm Melanie.</H1>
+          <Byline>
+            I'm a Los Angeles-based front-end developer who's worked across the
+            stack. I love building{' '}
+            <Link
+              href="https://github.com/melanieseltzer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              cool stuff
+            </Link>{' '}
+            with React and Node while learning everything I can in the process{' '}
+            <span role="img" aria-label="rocket">
+              🚀
+            </span>
+          </Byline>
+          <ImageWrapper>
+            {/* Thanks undraw.co! */}
+            <img src={Computer} alt="Computer" />
+          </ImageWrapper>
+        </Content>
       </Container>
     </HeaderWrapper>
     <SVGBottomBorder>
@@ -36,7 +43,11 @@ const Header = () => (
 export default Header;
 
 const HeaderWrapper = styled.header`
-  background: ${COLORS.secondary.lightest};
+  background-image: linear-gradient(
+    to bottom,
+    ${COLORS.accent.darkpurple},
+    ${COLORS.accent.darkblue}
+  );
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,11 +65,31 @@ const Container = styled.div`
   margin: 50px 20px;
   max-width: ${maxWidth};
   @media (min-width: 1024px) {
-    margin: 80px auto 80px auto;
+    margin: 80px auto 30px auto;
+  }
+`;
+
+const Content = styled.div`
+  position: relative;
+`;
+
+const ImageWrapper = styled.div`
+  display: none;
+  @media (min-width: 1024px) {
+    display: block;
+    margin: 0 0 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    img {
+      width: 300px;
+    }
   }
 `;
 
 const H1 = styled.h1`
+  color: #fff;
   font-size: 2rem;
   margin: 0 0 1rem 0;
   @media (min-width: 375px) {
@@ -70,12 +101,10 @@ const H1 = styled.h1`
   @media (min-width: 768px) {
     font-size: 2.8rem;
   }
-  @media (min-width: 1024px) {
-    font-size: 3.1rem;
-  }
 `;
 
 const Byline = styled.p`
+  color: #e4e4e4;
   font-family: 'Lora', sans-serif;
   font-size: 1.1rem;
   line-height: 2rem;
@@ -88,8 +117,7 @@ const Byline = styled.p`
     line-height: 2.4rem;
   }
   @media (min-width: 1024px) {
-    font-size: 1.875rem;
-    line-height: 2.875rem;
+    max-width: 60%;
   }
 `;
 

@@ -113,9 +113,9 @@ const FooterIcons = styled.div`
       content: '';
       display: block;
       width: 1px;
-      height: 80px;
+      height: 20px;
       background-color: ${COLORS.lineColor};
-      margin: 0px auto;
+      margin: 0 auto;
     }
   }
   @media (min-width: 1040px) {
@@ -134,7 +134,7 @@ const Icon = styled.li`
   margin: 0 10px;
   @media (min-width: 1024px) {
     display: block;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
   }
 `;
 
