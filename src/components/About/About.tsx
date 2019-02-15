@@ -34,6 +34,7 @@ export default About;
 
 const AboutWrapper = styled.div`
   p {
+    margin-top: 2rem;
     color: ${COLORS.secondary.light};
   }
 `;

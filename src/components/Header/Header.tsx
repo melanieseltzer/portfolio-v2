@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Computer from '../../images/undraw_Working_32n9.svg';
+import Computer from '../../images/undraw_tabs_jf82.svg';
 import SVG from '../SVG';
 
 import { COLORS, maxWidth, SharedLinkStyles } from '../../constants';

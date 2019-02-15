@@ -51,13 +51,13 @@ const H2 = styled.h2`
     height: 1px;
     position: absolute;
     top: 50%;
-    width: 2rem;
+    width: 1.5rem;
   }
   &:before {
-    left: -55px;
+    left: -30px;
   }
   &:after {
-    right: -55px;
+    right: -30px;
   }
 `;
 
