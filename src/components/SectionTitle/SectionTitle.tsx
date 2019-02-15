@@ -39,6 +39,7 @@ const H2 = styled.h2`
   font-size: 1.4rem;
   font-style: italic;
   font-weight: 400;
+  margin-bottom: 2rem;
   position: relative;
   svg {
     padding-top: 2px;

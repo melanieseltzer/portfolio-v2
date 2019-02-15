@@ -82,7 +82,7 @@ const Content = ({
 export default Content;
 
 const ContentWrapper = styled.div`
-  margin: ${({ isPost }: IsPost) => (isPost ? '2rem 0' : '3rem 0')};
+  margin: ${({ isPost }: IsPost) => (isPost ? '0 0 2rem 0' : '0 0 3rem 0')};
 `;
 
 const ContentHeader = styled.div`
@@ -103,10 +103,6 @@ const Title = styled.h3`
   font-size: 1.3rem;
   line-height: 2rem;
   font-weight: 400;
-  @media (min-width: 768px) {
-    font-size: 1.5rem;
-    line-height: 2.2rem;
-  }
 `;
 
 const Link = styled.a`

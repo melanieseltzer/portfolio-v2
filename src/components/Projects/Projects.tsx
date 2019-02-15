@@ -53,6 +53,4 @@ const Projects = () => (
 
 export default Projects;
 
-const ProjectsWrapper = styled.div`
-  margin: 3rem 0;
-`;
+const ProjectsWrapper = styled.div``;
