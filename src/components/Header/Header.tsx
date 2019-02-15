@@ -48,8 +48,6 @@ const HeaderWrapper = styled.header`
   justify-content: center;
   height: auto;
   padding-bottom: 40px;
-  @media (min-width: 414px) {
-  }
 `;
 
 const SVGBottomBorder = styled.div`
@@ -65,21 +63,6 @@ const Container = styled.div`
   max-width: ${maxWidth};
   @media (min-width: 1024px) {
     margin: 80px auto 30px auto;
-  }
-`;
-
-const ImageWrapper = styled.div`
-  display: none;
-  @media (min-width: 1024px) {
-    display: block;
-    margin: 0;
-    position: absolute;
-    right: -20px;
-    top: 0;
-    z-index: 2000;
-    img {
-      width: 300px;
-    }
   }
 `;
 
