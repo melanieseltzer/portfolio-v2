@@ -134,7 +134,7 @@ const Icon = styled.li`
   margin: 0 10px;
   @media (min-width: 1024px) {
     display: block;
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.5rem;
   }
 `;
 
