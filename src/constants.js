@@ -4,7 +4,12 @@ import { css } from 'styled-components';
 export const COLORS = {
   primary: { light: '#F7F8FE', dark: '#4763F5' },
   secondary: { lightest: '#F0F3F7', light: '#57595F', dark: '#262626' },
-  accent: { blue: '#21d4fd', purple: '#b721ff' },
+  accent: {
+    blue: '#21d4fd',
+    darkblue: '#4a00e0',
+    purple: '#b721ff',
+    darkpurple: '#6f00c3'
+  },
   white: '#FFF',
   lineColor: '#9ca2b7'
 };

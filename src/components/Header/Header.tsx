@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Computer from '../../images/undraw_tabs_jf82.svg';
 import SVG from '../SVG';
 
 import { COLORS, maxWidth, SharedLinkStyles } from '../../constants';
@@ -25,6 +26,10 @@ const Header = () => (
             🚀
           </span>
         </Byline>
+        <ImageWrapper>
+          {/* Thanks undraw.co! */}
+          <img src={Computer} alt="Computer" />
+        </ImageWrapper>
       </Container>
     </HeaderWrapper>
     <SVGBottomBorder>
@@ -36,7 +41,11 @@ const Header = () => (
 export default Header;
 
 const HeaderWrapper = styled.header`
-  background: ${COLORS.secondary.lightest};
+  background-image: linear-gradient(
+    to bottom,
+    ${COLORS.accent.darkpurple},
+    ${COLORS.accent.darkblue}
+  );
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,17 +57,36 @@ const SVGBottomBorder = styled.div`
   overflow: hidden;
   position: relative;
   width: 100%;
+  /* Hacky fix for weird line (gap) in firefox separating the SVG from the rest of the header */
+  top: -1px;
 `;
 
 const Container = styled.div`
+  position: relative;
   margin: 50px 20px;
   max-width: ${maxWidth};
   @media (min-width: 1024px) {
-    margin: 80px auto 80px auto;
+    margin: 80px auto 30px auto;
+  }
+`;
+
+const ImageWrapper = styled.div`
+  display: none;
+  @media (min-width: 1024px) {
+    display: block;
+    margin: 0 0 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    img {
+      width: 300px;
+    }
   }
 `;
 
 const H1 = styled.h1`
+  color: #fff;
   font-size: 2rem;
   margin: 0 0 1rem 0;
   @media (min-width: 375px) {
@@ -70,12 +98,10 @@ const H1 = styled.h1`
   @media (min-width: 768px) {
     font-size: 2.8rem;
   }
-  @media (min-width: 1024px) {
-    font-size: 3.1rem;
-  }
 `;
 
 const Byline = styled.p`
+  color: #e4e4e4;
   font-family: 'Lora', sans-serif;
   font-size: 1.1rem;
   line-height: 2rem;
@@ -87,9 +113,11 @@ const Byline = styled.p`
     font-size: 1.4rem;
     line-height: 2.4rem;
   }
+  @media (min-width: 768px) {
+    max-width: 90%;
+  }
   @media (min-width: 1024px) {
-    font-size: 1.875rem;
-    line-height: 2.875rem;
+    max-width: 60%;
   }
 `;
 

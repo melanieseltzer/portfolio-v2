@@ -5,9 +5,9 @@ import Section from '../Section';
 
 import { COLORS } from '../../constants';
 
-const Projects = () => (
+const About = () => (
   <Section title="About">
-    <ProjectsWrapper>
+    <AboutWrapper>
       <p>
         I'm a web developer with 8 years industry experience, currently working
         primarily in the front-end. I enjoy creating clean, intuitive and
@@ -26,21 +26,15 @@ const Projects = () => (
         games, hiking, traveling somewhere new, wasting copious amounts of time
         on Reddit, or playing with (annoying) Callie.
       </p>
-    </ProjectsWrapper>
+    </AboutWrapper>
   </Section>
 );
 
-export default Projects;
+export default About;
 
-const ProjectsWrapper = styled.div`
+const AboutWrapper = styled.div`
   p {
+    margin-top: 2rem;
     color: ${COLORS.secondary.light};
-  }
-`;
-
-const Link = styled.a`
-  color: ${COLORS.primary.dark};
-  &:hover {
-    text-decoration: underline;
   }
 `;
