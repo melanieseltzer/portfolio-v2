@@ -16,7 +16,9 @@
     "build": "gatsby build",
     "start": "gatsby develop",
     "eslint": "eslint 'src/**/*.{js,ts,jsx,tsx}'",
-    "tslint": "tslint -t verbose -c tslint.json --project tsconfig.json 'src/**/*.{ts,tsx}'"
+    "tslint": "tslint -t verbose -c tslint.json --project tsconfig.json 'src/**/*.{ts,tsx}'",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -66,7 +68,8 @@
     "react-icons": "^3.5.0",
     "react-markdown": "^4.0.6",
     "styled-components": "^4.2.0",
-    "typescript": "^3.4.1"
+    "typescript": "^3.4.1",
+    "snyk": "^1.161.1"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
@@ -89,5 +92,6 @@
     "tslint-react": "^4.0.0",
     "tslint-react-a11y": "^1.0.0",
     "typescript-eslint-parser": "^22.0.0"
-  }
+  },
+  "snyk": true
 }
