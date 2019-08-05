@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/camelcase */
 module.exports = {
   siteMetadata: {
     title: 'Portfolio of Melanie Seltzer',
@@ -37,7 +38,6 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-typescript',
-    'gatsby-plugin-tslint',
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
