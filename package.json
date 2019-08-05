@@ -15,8 +15,8 @@
   "scripts": {
     "build": "gatsby build",
     "start": "gatsby develop",
-    "eslint": "eslint 'src/**/*.{js,ts,jsx,tsx}'",
-    "tslint": "tslint -t verbose -c tslint.json --project tsconfig.json 'src/**/*.{ts,tsx}'"
+    "lint:js": "eslint 'src/**/*.js'",
+    "lint:ts": "eslint --ext .ts --ext .tsx src"
   },
   "husky": {
     "hooks": {
@@ -24,14 +24,8 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
+    "*.{js,jsx,ts,tsx}": [
       "eslint --fix",
-      "prettier --write",
-      "git add"
-    ],
-    "*.{ts,tsx}": [
-      "eslint --fix",
-      "tslint --fix",
       "prettier --write",
       "git add"
     ],
@@ -69,6 +63,8 @@
     "typescript": "^3.5.3"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
     "eslint": "^6.1.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^6.0.0",
@@ -76,18 +72,8 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-typescript": "^0.14.0",
-    "gatsby-plugin-tslint": "^0.0.2",
     "husky": "^3.0.2",
     "lint-staged": "^9.2.1",
-    "prettier": "^1.18.2",
-    "tslint": "^5.18.0",
-    "tslint-config-airbnb": "^5.11.1",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-loader": "^3.5.4",
-    "tslint-plugin-prettier": "^2.0.1",
-    "tslint-react": "^4.0.0",
-    "tslint-react-a11y": "^1.0.0",
-    "typescript-eslint-parser": "^22.0.0"
+    "prettier": "^1.18.2"
   }
 }
