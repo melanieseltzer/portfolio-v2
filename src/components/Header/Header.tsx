@@ -11,7 +11,7 @@ const Header = () => (
       <Container>
         <H1>Hi! I'm Melanie.</H1>
         <Byline>
-          I'm a Software Engineer based in beautiful Portland, OR.
+          I'm a Software Engineer based in beautiful Portland, Oregon.
           <br />I love building{' '}
           <Link
             href="https://github.com/melanieseltzer"
