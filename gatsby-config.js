@@ -56,13 +56,13 @@ module.exports = {
           'https://api-uswest.graphcms.com/v1/cjqg22g5m13h901btfhl4juf1/master',
         refetchInterval: 10
       }
-    },
-    {
-      resolve: 'gatsby-source-medium',
-      options: {
-        username: `@melanieseltzer`
-      }
     }
+    // {
+    //   resolve: 'gatsby-source-medium',
+    //   options: {
+    //     username: `@melanieseltzer`
+    //   }
+    // }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
