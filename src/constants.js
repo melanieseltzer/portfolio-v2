@@ -61,6 +61,6 @@ export const socials = [
   },
   {
     name: 'Email',
-    link: 'mailto:melleh11@gmail.com'
+    link: 'mailto:melanieseltzer1@gmail.com'
   }
 ];
